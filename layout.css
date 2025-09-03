@@ -1,0 +1,62 @@
+body {
+    margin: 0; /*removes default browser  margin around the page*/
+    font-family: 'Times New Roman', Times, serif; /* it sets a clean beatiful font for the user*/
+    min-height: 100vh ;/* Makes body at least full screen height*/
+    display: flex; /* Turn body into a flex container*/
+    flex-direction: column;
+}
+
+/* Top section*/
+.header {
+    color: rgb(66, 66, 66); /* White text*/
+    display: block; /* stack upper and lower bblocks*/
+
+}
+
+.First{
+    background-color: grey; /* sets the color for the upper part*/
+    padding: 20px; /* give space inside */
+    text-align: left;/* center the text*/; 
+    color: white;
+}
+
+.menu nav ul{
+    margin: 0; /* removes extra space;*/
+    display: flex;/*flex header for the layout*/
+    list-style: none; /*This removes the bullets on the nav elements*/
+    gap: 20px; /*space between the links*/
+    color: white;
+    background-color: black;
+    padding: 20px;
+    justify-content: space-around; /* even spacing around each item*/
+}
+.menu nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.main{
+    background-color: grey; /* Sets the background color for the main */
+    color:white; /* sets the text color in our document*/
+    flex-grow: 1; /* Expand to take remaining space*/
+    display: flex; /*horizontal flex layout*/
+    
+
+}
+.left{
+    flex: 3; /*Takes 75% of width*/
+}
+
+.right{
+    flex: 1; /*Takes 50% of width*/
+    color: black; /* sets the text color*/
+    background-color: white; /*This will set a white background for the right part*/
+    padding: 5px ;/* space inside*/
+}
+footer{
+    background-color: rgb(66, 66, 66); /* Sets the background color for the main */
+    color:white; /* sets the text color in our document*/
+    padding: 20px ; /*sets the space around the text in the main */
+    text-align: center; /* centers the text around the space given in the footer*/
+
+}
