@@ -1,0 +1,118 @@
+body{
+    display: block;
+}
+
+
+.header{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* for the entire text in the header, here's the font*/
+    background-color: aquamarine;
+}
+
+#course-title{
+    color: rgb(59, 48, 48); /*the text of the course tittle*/
+    justify-content: space-around;
+    display: inline-block;
+}
+#name{
+    color: black; /* the color for the name*/
+    font-size: 20px;
+}
+
+.tittle{
+    display: flex;
+    margin: 0%;
+    justify-content: center;
+}
+
+.tittle h1{
+    text-align: center;
+    justify-items:center ;
+}
+
+.tittle h2{
+    padding: 1%;
+}
+
+.nav ul{ 
+    display: flex; /* change only the nav layout from its default (block- the block is default because of the li and ul) to be flex*/
+    justify-content: space-around; /* spread the links evenly */
+    list-style: none; /* this removes the bullets on the nav elements */
+    background-color: black;
+}
+
+.nav ul li a {
+    text-decoration: none; /*this line removes any text decoration on the nav elements */
+    color: whitesmoke;
+    padding: 0px;
+    
+}
+
+.main {
+    display: flex;
+}
+
+.aboutme{
+    flex: 2; 
+    text-align: center;
+    
+}
+
+.webdev{
+    flex: 1;
+    position: relative;
+}
+
+.navex{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.left{
+    background-color: aqua;
+    margin: 2%;
+    padding: 20px;
+    border-radius: 15px; /* rounded corners*/
+}
+
+
+
+.right{
+    background-color: aqua;
+    margin: 2%;
+    padding: 20px;
+    border-radius: 15px; /* rounded corners*/
+}
+.home{
+    display: flex;
+}
+.description{
+    display: block;
+    flex:2;
+}
+
+.flag{
+    display: flex;
+    align-content: space-between;
+    margin: 20px;
+}
+
+
+.flag p{
+    text-align: justify;
+    margin: 50px;
+}
+
+
+.footer{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px;
+}
+
+#lastModified{
+    color: brown;
+}
