@@ -1,10 +1,10 @@
 body{
     display: block;
+    font-family: "Roboto", sans-serif;
 }
 
 
 .header{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* for the entire text in the header, here's the font*/
     background-color: aquamarine;
 }
 
