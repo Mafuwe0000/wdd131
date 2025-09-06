@@ -44,11 +44,17 @@ body{
     text-decoration: none; /*this line removes any text decoration on the nav elements */
     color: whitesmoke;
     padding: 0px;
+
     
+}
+.nav ul li a:hover {
+    color: bisque;
 }
 
 .main {
     display: flex;
+    max-width: fit-content;
+    margin: 0 auto; /*this centers horizontally*/
 }
 
 .aboutme{
