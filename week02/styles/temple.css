@@ -1,0 +1,67 @@
+body{
+    display: block;
+    font-family: "Roboto", sans-serif;
+}
+
+.header{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nav ul{ 
+    display: flex; /* change only the nav layout from its default (block- the block is default because of the li and ul) to be flex*/
+    justify-content: space-around; /* spread the links evenly */
+    list-style: none; /* this removes the bullets on the nav elements */
+    gap: clamp(0.5rem, 2vw, 2rem); /*this allows the gap in the nav elements to grow or shrink depending on the screen widht */
+}
+
+.nav ul li a {
+    text-decoration: none; /*this line removes any text decoration on the nav elements */
+    color: black;
+    padding: 0px;
+
+    
+}
+.nav ul li a:hover {
+    color: white;
+}
+
+
+
+main{
+    display:flex;
+    flex-direction: column;
+    margin: 1rem;
+    max-width:1000px ;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagens{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap:60px ;
+}
+.temple{
+    justify-items: center;
+}
+.temple h2{
+    text-decoration: none;
+    font-size: small;
+}
+
+
+.footer{
+    background-color: aqua;
+    text-align: center;
+    padding: 20px;
+}
+
+#lastModified{
+    color: brown;
+}
