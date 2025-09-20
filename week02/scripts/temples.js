@@ -9,3 +9,9 @@ const lastModified = document.lastModified; //this gets the last modified date o
 
 document.getElementById("lastModified").textContent = lastModified;
 
+const mainnave=document.querySelector('.nav');
+const hambutton = document.querySelector('nav');
+
+hambutton.addEventListener('click',()=>{
+    mainnave.classList.toggle('show');
+    hambutton.classList.toggle('show');});
