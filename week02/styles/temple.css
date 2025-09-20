@@ -3,6 +3,18 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
+main {
+    max-width: 1100px;;
+    margin:0 auto; /*center*/
+    padding: 0 1rem; /*space from the edges, 0 is for the top and bottom, auto is the left and right automatic*/
+}
+
+header, footer{
+    width: 100%; /*take the full width of the viewport*/
+    margin: 0;
+    padding: 1rem;
+}
+
 .header{
     display: flex;
     background-color: aqua;
@@ -32,20 +44,24 @@ body{
 
 
 main{
-    display:flex;
-    flex-direction: column;
-    margin: 1rem;
-    max-width:1000px ;
+    display:grid;
     justify-content: center;
     align-items: center;
+}
+.home{
+    justify-items: center;
 }
 
 .imagens{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    gap:60px ;
+    grid-row-start: 2;
+    gap:2rem ;
+}
+
+.imagens img {
+    width: 100%; /*fill the grid cell width*/
+    height: 200px; /*fixed height*/
+    object-fit: cover; /*this crops to fill without distortion*/
 }
 .temple{
     justify-items: center;
