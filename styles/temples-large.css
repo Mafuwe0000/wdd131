@@ -3,17 +3,25 @@
         background-color:black;
         color: white;
     }
+
+    .nav ul{
+        display: flex;
+    }
     .nav ul li a{
         color: white;
     }
     .nav ul li a:hover {
     color: rgb(207, 34, 34);
-}
+    text-align:center;
+}   
+
+    #menu{
+        display: none;
+    }
 
     main{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); grid-gap:25px;place-items: center;
-
     }
 
     .imagens{
@@ -21,7 +29,12 @@
     grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
     grid-row-start: 2;
     gap:2rem ;
+    }
 
-    
-}
+    .nav li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+   
 }

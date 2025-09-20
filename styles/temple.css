@@ -22,15 +22,15 @@ header, footer{
     align-items: center;
 }
 
-
-.nav ul{ 
-    display: flex; /* change only the nav layout from its default (block- the block is default because of the li and ul) to be flex*/
-    justify-content: space-around; /* spread the links evenly */
-    list-style: none; /* this removes the bullets on the nav elements */
-    gap: clamp(0.5rem, 2vw, 2rem); /*this allows the gap in the nav elements to grow or shrink depending on the screen widht */
+.nav{
+    max-width: 768px;
+}
+.nav li{ 
+    display: none; /*hide the navigation link by default*/
+    
 }
 
-.nav ul li a {
+.nav a {
     display: block;
     text-decoration: none; /*this line removes any text decoration on the nav elements */
     color: black;
@@ -85,4 +85,30 @@ main{
 
 #lastModified{
     color: brown;
+}
+
+#nav{  /* this is for the hamburger button only*/
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: #eee;
+    color:#e71212;
+}
+
+#menu::before{
+    content: "☰"; /*in here we are adding the button(icon) with css*/
+    text-decoration: none;
+}
+
+.show li{
+    display: block;
+}
+
+#menu.show::before{
+    content: "X"; /*this will change hamburger to X when open*/
+}
+#menu{
+    font-size: 3rem;
 }
