@@ -20,12 +20,11 @@
     }
 
     main{
-        display: grid;
+
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); grid-gap:25px;place-items: center;
     }
 
     .imagens{
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
     grid-row-start: 2;
     gap:2rem ;
