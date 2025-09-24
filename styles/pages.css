@@ -1,0 +1,47 @@
+body{
+    display: block;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    max-width: 1100px;;
+    margin:0 auto; /*center*/
+    padding: 0 1rem; /*space from the edges, 0 is for the top and bottom, auto is the left and right automatic*/
+}
+
+header, footer{
+    width: 100%; /*take the full width of the viewport*/
+    margin: 0;
+    padding: 1rem;
+}
+
+.header{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+main{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+.Data{
+    justify-content: center;
+}
+
+.Data ul li{
+    text-decoration: none;
+}
+.footer{
+    background-color: aqua;
+    text-align: center;
+    padding: 20px;
+}
+
+#lastModified{
+    color: brown;
+}
+
