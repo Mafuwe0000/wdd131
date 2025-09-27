@@ -1,3 +1,31 @@
+:root {
+  --bg: white;
+  --text: black;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+}
+
+.Data::after {
+  content: ""; /* nothing by default */
+  color: crimson;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Data:hover::after {
+  content: " → more info";
+  opacity: 1;
+}
+
 body{
     display: block;
     font-family: "Roboto", sans-serif;
