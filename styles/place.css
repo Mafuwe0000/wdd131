@@ -35,6 +35,10 @@ main{
 .Data ul li{
     text-decoration: none;
 }
+
+.imagens{
+    width: 100%;
+}
 .footer{
     background-color: aqua;
     text-align: center;
