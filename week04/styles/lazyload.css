@@ -1,0 +1,135 @@
+body{
+    display: block;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    max-width: 1100px;;
+    margin:0 auto; /*center*/
+    padding: 0 1rem; /*space from the edges, 0 is for the top and bottom, auto is the left and right automatic*/
+}
+
+header, footer{
+    width: 100%; /*take the full width of the viewport*/
+    margin: 0;
+    padding: 1rem;
+}
+
+.header{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav{
+    max-width: 768px;
+}
+.nav li{ 
+    display: none; /*hide the navigation link by default*/
+    
+}
+
+.nav a {
+    display: block;
+    text-decoration: none; /*this line removes any text decoration on the nav elements */
+    color: black;
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+
+    
+}
+.nav ul li a:hover , nav ul li a:active{
+    color: white;
+}
+
+
+
+main{
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+.home{
+    justify-items: center;
+}
+
+.imagens{
+    display: grid;
+    grid-row-start: 2;
+    gap:2rem ;
+}
+
+.imagens img {
+    width: 100%; /*fill the grid cell width*/
+    height: 200px; /*fixed height*/
+    object-fit: cover; /*this crops to fill without distortion*/
+    
+}
+.temple{
+    justify-items: center;
+    animation: fade 15s;
+}
+.temple h2{
+    text-decoration: none;
+    font-size: small;
+}
+
+
+.footer{
+    background-color: aqua;
+    text-align: center;
+    padding: 20px;
+}
+
+#lastModified{
+    color: brown;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+table{
+    width: 400px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 0.5em 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    white-space: pre;
+}
+
+thead th, tbody td{
+    text-align: center;
+}
+
+thead{
+    color: #fff;
+    background-color: #000;
+}
+
+th {
+    padding: 1rem;
+    font-size: larger;
+}
+
+tr:nth-last-child{
+    background-color: #333;
+}
+
+tbody tr:nth-last-child(even){
+    background-color: yellow;
+}
