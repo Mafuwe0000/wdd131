@@ -56,24 +56,13 @@ main{
 .home{
     justify-items: center;
 }
-
-.imagens{
-    display: grid;
-    grid-row-start: 2;
-    gap:2rem ;
-}
-
-.imagens img {
-    width: 100%; /*fill the grid cell width*/
-    height: 200px; /*fixed height*/
-    object-fit: cover; /*this crops to fill without distortion*/
-}
-.temple{
-    justify-items: center;
-}
-.temple h2{
-    text-decoration: none;
-    font-size: small;
+.templos{
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    animation: fade 15s;
 }
 
 
@@ -112,3 +101,15 @@ main{
 #menu{
     font-size: 3rem;
 }
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+

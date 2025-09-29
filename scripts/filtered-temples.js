@@ -76,34 +76,35 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
-    templeName:"Natal Brazil Temple",
-    location:"Nova Parnamirim, Brazil",
-    dedicated:"2025, May, 2025",
+    templeName:"Recife Brazil Temple",
+    location:"Recife, Brazil",
+    dedicated:"2000, December, 15",
     area:19800,
     imageUrl:
-    "https://churchofjesuschristtemples.org/natal-brazil-temple/photographs/#Official"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/recife-brazil/400x250/recife-brazil-temple-lds-700211-wallpaper.jpg"
   },
   {
-    templeName:"Dallas Texas Temple",
+    templeName:"Dallas Temple",
     location:"Texas, USA",
-    dedicated:"1983, January, 22",
+    dedicated:"1984, October, 19",
     area:44207,
     imageUrl:
-    "https://churchofjesuschristtemples.org/dallas-texas-temple/photographs/#Gallery-21"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/dallas-texas/2018/400x250/Dallas-Texas-Temple06.jpg"
 
   },
   {
-    templeName:"Kaohsiung Taiwan Temple",
-    location:"Kaohsiung, Taiwan",
-    dedicated:"2023, November, 25",
+    templeName:"Kinshasa Democratic Republic of the Congo Temple",
+    location:"Kinshasa, Congo",
+    dedicated:"2019, April, 14",
     area:10900,
     imageUrl:
-    "https://churchofjesuschristtemples.org/kaohsiung-taiwan-temple/photographs/#Official"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kinshasa-democratic-republic-of-congo/400x250/01-Kinshasa-DRCongo-Temple-2208932.jpg"
   }
 
 
   // Add more temple objects here...
 ];
+/*
 const container =document.getElementById("templos");
 
   const cards = temples.map(item =>{
@@ -113,9 +114,75 @@ const container =document.getElementById("templos");
         <p>${item.location}</p>
         <p>${item.dedicated}</p>
         <p>${item.area}</p>
-        <img src="${imageUrl}" alt="temple image"/>
+        <img src="${item.imageUrl}" alt="${item.templeName}" loading="lazy"/>
+        
     </div>
     `
   }).join("");//join() converts array of strings into a single string
   
-  container.innerHTML =cards;
+  container.innerHTML =cards;*/
+  
+  createTempleCard(temples);
+
+  function createTempleCard(){
+    temples.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+
+        name.textContent = temple.templeName;
+        location.innerHTML =`<span class="label">Location: </span> ${temple.location}`;
+        dedication.innerHTML=`<span class="label">Dedicated: </span> ${temple.dedicated}`;
+        area.innerHTML=`<span class="label"> Size: </span> ${temple.area} sq ft`;
+
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName}Temple`);
+        img.setAttribute("loading","lazy");
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
+
+        document.querySelector(".templos").appendChild(card);
+    });
+    }
+  
+
+
+const oldTempleButton = document.querySelector("#oldTemples");
+oldTempleButton.addEventListener("click", ()=>{
+    createTempleCard(temples.filter(temple=> temple.dedicated > 1900));
+})
+
+ function createTempleCard(filteredTemples){
+    filteredTemples.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+
+        name.textContent = temple.templeName;
+        location.innerHTML =`<span class="label">Location: </span> ${temple.location}`;
+        dedication.innerHTML=`<span class="label">Dedicated: </span> ${temple.dedicated}`;
+        area.innerHTML=`<span class="label"> Size: </span> ${temple.area} sq ft`;
+
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName}Temple`);
+        img.setAttribute("loading","lazy");
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
+
+        document.querySelector(".templos").appendChild(card);
+    });
+    }
