@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <script src="scripts/form.js"  defer></script>
+
+    <meta name="description" content="This page creates product review form using good form design and specific field requirements, it will include a submission confirmation with a counter. In addition, the form will use be friendly on both mobile and desktop screens.">
+    <meta name="author" content="Mafuwe Manuel Combucane Samo">
+</head>
+<body>
+    <header class="header">
+        <h1 class="Album"> Product Review </h1>
+
+       
+    </header>
+    <main>
+        <form method="get" action="review.html"  class="reviewing">
+            <fieldset>
+            <label for=""> Product Name</label>
+                <select name="" id="product">
+                    <option value=""> Choose a product... </option>
+                    
+                </select>
+            
+            <div id="stars"> Overall Rating 
+            <input type="radio" name="stars" id="star-a" value="1" required> 
+            <label for="star-a">☆</label>
+            <input type="radio" name="stars" id="star-b" value="2" required>
+            <label for="star-a">☆☆</label>
+            <input type="radio" name="stars" id="star-c" value="3" required>
+            <label for="star-a">☆☆☆</label>
+            <input type="radio" name="stars" id="star-d" value="4" required>
+            <label for="star-a">☆☆☆&star;</label>
+            <input type="radio" name="stars" id="star-e" value="5" required>
+            <label for="star-a">☆☆☆☆&star;</label>
+            </div>
+
+
+
+            <div> </div>
+            <label for=""> <input type="date" id="date" name="date" required ></label>
+
+            <div> Which features did you find useful in the product</div>
+            <div> Check all that apply</div>
+            <label for=""> <input type="checkbox" name="durability" value="yes"> Durability</label>
+            <label for=""> <input type="checkbox" name="ease" value="yes"> Ease of use</label>
+            <label for=""> <input type="checkbox" name="performance" value="yes"> Performance</label>
+            <label for=""> <input type="checkbox" name="design" value="yes"> Design</label>
+
+            <div> Written Review (optional)</div>
+            <label for=""><textarea name="review" id="review"></textarea></label>
+            <div> Your Name (optional)</div>
+            <label for=""><input type="text" name="name" id="name"></label>
+            
+            <input type="submit" value="post my review" id="postmyreview">
+            </fieldset>
+        </form>
+    </main>
+    <footer class="footer">
+        <h3> &copy;  <span id="currentYear"></span>  Mafuwe Manuel Combucane Samo - Mozambique </h3>
+        <p> Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>
