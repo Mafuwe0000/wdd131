@@ -65,7 +65,9 @@ header, footer{
     color: brown;
     font-size: .9rem;
 }
-#stars{margin-left: 10px}
+#stars{
+    
+    margin-left: 10px}
 
 .reviewing div{
     display: flex;
