@@ -38,6 +38,7 @@ header, footer{
     max-width: 400px;
     padding: .8rem;
     margin: -1rem 2% 2rem 2%;
+    margin-left: 10px
 }
 
 #review{
@@ -64,7 +65,7 @@ header, footer{
     color: brown;
     font-size: .9rem;
 }
-
+#stars{margin-left: 10px}
 
 .reviewing div{
     display: flex;
