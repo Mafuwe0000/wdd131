@@ -39,3 +39,10 @@ const products = [
     averagerating: 5.0
   }
 ];
+const select = document.getElementById("productName");
+products.forEach(product =>{
+  const option=document.createElement("option"); //create<option>
+  option.value = product.id;
+  option.textContent=product.name;
+  select.appendChild(option);
+})
