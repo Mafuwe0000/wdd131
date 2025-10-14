@@ -51,3 +51,56 @@ hambutton.addEventListener('click', () => {
 
   // Call showNextSlide() every 5 seconds (5000 milliseconds)
   setInterval(showNextSlide, 5000);
+
+  
+const messages = [
+  {
+    id: "1888",
+    name: "Irma",
+  },
+  {
+    id: "2050",
+    name: "Irmao",
+  },
+  {
+    id: "1987",
+    name: "primo",
+  },
+  {
+    id: "2000",
+    name: "prima",
+  
+  },
+  {
+    id: "1969",
+    name: "tio ou tia",
+  }
+];
+const select = document.getElementById("relationship");
+messages.forEach(item => {
+  const option = document.createElement("option");
+  option.value = item.id;          // Use item.id
+  option.textContent = item.name;  // Use item.name
+  select.appendChild(option);
+})
+
+// Populate the dropdown when the DOM is fully loaded
+
+document.addEventListener("DOMContentLoaded", function () {
+  const messages = [
+    { id: "1888", name: "Irma" },
+    { id: "2050", name: "Irmao" },
+    { id: "1987", name: "primo" },
+    { id: "2000", name: "prima" },
+    { id: "1969", name: "tio ou tia" }
+  ];
+
+  const select = document.getElementById("relationship");
+
+  messages.forEach(item => {
+    const option = document.createElement("option");
+    option.value = item.id;
+    option.textContent = item.name;
+    select.appendChild(option);
+  });
+});
