@@ -77,9 +77,9 @@ const messages = [
   }
 ];
 const select = document.getElementById("relationship");
-products.forEach(messages =>{
+messages.forEach(item =>{
   const option=document.createElement("option"); //create<option>
   option.value = messages.id;
-  option.textContent=product.name;
+  option.textContent=messages.name;
   select.appendChild(option);
 })
