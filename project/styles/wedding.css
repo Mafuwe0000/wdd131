@@ -55,32 +55,32 @@ main{
     align-items: center;
 }
 
-.sitename, .color,.scenarios,.wireframe,.typo{
-    justify-items: center;
-    align-items:last baseline;
-}
-.sitename{
+.gallery{
+    grid-row-start: 2;
     grid-column: 1/4;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+
 }
-.scenarios{
-    grid-column: 1/2;
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
 }
 
-.color{
- grid-column: 2/3
-}
-.typo{
-grid-column: 3/4;
+.slides img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
 }
 
-.wireframe{
-    grid-column-start: 1/4;
-}
-img {
-    width: 100%; /*fill the grid cell width*/
-    height: 200px; /*fixed height*/
-    object-fit: cover; /*this crops to fill without distortion*/
-}
+
 
 
 .footer{
