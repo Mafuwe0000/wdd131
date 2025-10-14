@@ -76,7 +76,7 @@ const messages = [
     name: "tio ou tia",
   }
 ];
-const select = document.getElementById("Name");
+const select = document.getElementById("relationship");
 products.forEach(messages =>{
   const option=document.createElement("option"); //create<option>
   option.value = messages.id;
