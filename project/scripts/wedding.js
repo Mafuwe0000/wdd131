@@ -51,3 +51,35 @@ hambutton.addEventListener('click', () => {
 
   // Call showNextSlide() every 5 seconds (5000 milliseconds)
   setInterval(showNextSlide, 5000);
+
+  
+const messages = [
+  {
+    id: "1888",
+    name: "Irma",
+  },
+  {
+    id: "2050",
+    name: "Irmao",
+  },
+  {
+    id: "1987",
+    name: "primo",
+  },
+  {
+    id: "2000",
+    name: "prima",
+  
+  },
+  {
+    id: "1969",
+    name: "tio ou tia",
+  }
+];
+const select = document.getElementById("Name");
+products.forEach(messages =>{
+  const option=document.createElement("option"); //create<option>
+  option.value = messages.id;
+  option.textContent=product.name;
+  select.appendChild(option);
+})
